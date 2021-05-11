@@ -1,0 +1,50 @@
+{
+  "name": "kiwina/laravel-zeromq",
+  "type": "library",
+  "description": "ZeroMQ driver for Laravel",
+  "keywords": [
+    "laravel",
+    "zeromq",
+    "zmq",
+    "messaging",
+    "pubsub",
+    "pushpull"
+  ],
+  "homepage": "https://github.com/kiwina/laravel-zeromq",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kiwina",
+      "email": "me@kiwina.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "react/zmq": "^0.4.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.0 | 4.x | 5.x"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kiwina\\ZeroMQ\\": "src/"
+    },
+    "classmap": [
+      "tests"
+    ],
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kiwina\\ZeroMQ\\Providers\\ServiceProvider"
+      ],
+      "aliases": {
+        "ZeroMQ": "Kiwina\\ZeroMQ\\Facades\\ZeroMQ"
+      }
+    }
+  }
+}
